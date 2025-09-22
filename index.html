@@ -1,162 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victor Cryprt — Web3 Fundraising & Partnerships</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
-
-  <style>
-    /* Base Styles */
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      margin-bottom: 0.5em;
-    }
-
-    a {
-      color: #00ff94;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    a:hover {
-      color: #00c4ff;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem;
-      background: linear-gradient(to right, #0a0a0a, #111111);
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      font-size: 1.1rem;
-      color: #bbb;
-    }
-    .cta-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
-      background: linear-gradient(45deg, #00ff94, #00c4ff);
-      color: #0a0a0a;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .cta-buttons a:hover {
-      opacity: 0.85;
-    }
-
-    /* Section */
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    /* Cards */
-    .cards {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .card {
-      background: #111;
-      padding: 2rem;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0, 255, 148, 0.2);
-    }
-
-    /* Partnership Section */
-    .partner button {
-      background: linear-gradient(45deg, #00ff94, #00c4ff);
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      color: #0a0a0a;
-      transition: 0.3s;
-    }
-    .partner button:hover {
-      opacity: 0.85;
-    }
-    #partnerFormContainer {
-      margin-top: 2rem;
-      display: none;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #111;
-      font-size: 0.95rem;
-    }
-    footer a {
-      margin: 0 0.5rem;
-    }
-    footer p {
-      margin: 0.5rem 0;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Cryprt - Web3 Builder</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <div class="logo">VictorCryprt</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <h1>I help Web3 projects raise funds & connect with the right investors</h1>
-    <p>From pre-seed to growth, I bring capital, partnerships, and strategy to founders ready to scale. Let’s build something massive together.</p>
-    <div class="cta-buttons">
-      <a href="#partner">Work With Me</a>
-      <a href="https://calendly.com/victorcryprt/new-meeting" target="_blank">Book a Call</a>
-    </div>
+    <h1 class="fade-in">Building the Future of Web3 🚀</h1>
+    <p class="fade-in">I help projects raise capital, scale, and dominate their niche.</p>
+    <a href="services.html" class="btn">Explore Services</a>
   </section>
 
-  <!-- What I Do -->
-  <section>
-    <h2>What I Do</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Fundraising</h3>
-        <p>I connect founders with pre-seed & seed investors ready to write small-to-large checks.</p>
-      </div>
-      <div class="card">
-        <h3>Partnerships</h3>
-        <p>Bring projects, investors, or deals. Close together. Share the upside.</p>
-      </div>
-      <div class="card">
-        <h3>Strategy</h3>
-        <p>Advisory & positioning to get your project investment-ready and scalable.</p>
-      </div>
-    </div>
+  <section class="about">
+    <h2>Who I Am</h2>
+    <p>
+      I’m Victor Cryprt — a Web3 builder & strategist focused on fundraising, 
+      partnerships, and growth. My mission is to help startups scale with clarity, 
+      revenue, and execution.
+    </p>
   </section>
 
-  <!-- Partnerships -->
-  <section id="partner" class="partner">
-    <h2>Partnerships</h2>
-    <p>Let’s collaborate. Whether you’re a founder, investor, or connector — this is where we grow together.</p>
-    <button onclick="toggleForm()">📩 Apply for Partnership</button>
+  <footer>
+    <p>© 2025 Victor Cryprt. All Rights Reserved.</p>
+  </footer>
 
-    <div id="partnerFormContainer">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true"
+  <script src="script.js"></script>
+</body>
+</html>
