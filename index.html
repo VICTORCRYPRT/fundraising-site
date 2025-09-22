@@ -1,103 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundraising Made Easy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Cryprt — Web3 Fundraising & Partnerships</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 0.5em;
+    }
+
+    a {
+      color: #00ff94;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #00c4ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(to right, #0a0a0a, #111111);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      color: #bbb;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      background: linear-gradient(45deg, #00ff94, #00c4ff);
+      color: #0a0a0a;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-buttons a:hover {
+      opacity: 0.85;
+    }
+
+    /* Section */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .card {
+      background: #111;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 148, 0.2);
+    }
+
+    /* Partnership Section */
+    .partner button {
+      background: linear-gradient(45deg, #00ff94, #00c4ff);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #0a0a0a;
+      transition: 0.3s;
+    }
+    .partner button:hover {
+      opacity: 0.85;
+    }
+    #partnerFormContainer {
+      margin-top: 2rem;
+      display: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      font-size: 0.95rem;
+    }
+    footer a {
+      margin: 0 0.5rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
+  </style>
 </head>
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Fundraising Made Easy</h1>
-    <p>I help Web3 & AI projects secure Pre-Seed & Seed investors with tailored strategies and access to my investor network.</p>
-    <div class="cta">
-      <a href="https://calendly.com/victorcryprt/new-meeting" class="btn">Book Free Consultation</a>
-      <a href="#partner" class="btn btn-alt">Partner With Me</a>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>I help Web3 projects raise funds & connect with the right investors</h1>
+    <p>From pre-seed to growth, I bring capital, partnerships, and strategy to founders ready to scale. Let’s build something massive together.</p>
+    <div class="cta-buttons">
+      <a href="#partner">Work With Me</a>
+      <a href="https://calendly.com/victorcryprt/new-meeting" target="_blank">Book a Call</a>
     </div>
-  </header>
-
-  <!-- OFFER -->
-  <section class="offer">
-    <h2>MY EXCLUSIVE OFFER</h2>
-    <p><strong>If you’re a Web3 or AI founder struggling to raise, I’ll connect you with serious Pre-Seed & Seed investors. You’ll get direct introductions, advisory, and deal structuring — or you don’t pay.</strong></p>
-    <ul>
-      <li>✔ Access to my private investor network</li>
-      <li>✔ Tailored fundraising strategy for your stage</li>
-      <li>✔ Deal structuring for maximum valuation</li>
-      <li>✔ Free 30-min consultation</li>
-      <li>✔ Partner commission opportunities</li>
-    </ul>
   </section>
 
-
-  <!-- PARTNERSHIPS -->
-<section id="partner" class="partner">
-  <h2>Partnerships</h2>
-  <p>Let’s collaborate and build together. Whether it’s projects, investors, or new opportunities — we grow, win, and share the upside side by side.</p>
-
-  <button onclick="togglePartnership()">📩 Apply for Partnership</button>
-
-  <div id="partnerFormContainer" style="display:none; margin-top:20px;">
-    <iframe id="partnerFormIframe"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true"
-      width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
-      Loading…
-    </iframe>
-  </div>
-
-  <div id="thankYouMessage" style="display:none; text-align:center; margin-top:20px;">
-    <h3>✅ Thank you!</h3>
-    <p>We’ll get back to you ASAP.</p>
-    <button onclick="refreshPartnership()">Submit another response</button>
-  </div>
-</section>
-
-<script>
-  function togglePartnership() {
-    const container = document.getElementById("partnerFormContainer");
-    container.style.display = (container.style.display === "none") ? "block" : "none";
-  }
-
-  function refreshPartnership() {
-    const iframe = document.getElementById("partnerFormIframe");
-    iframe.src = iframe.src; // reload iframe
-    document.getElementById("thankYouMessage").style.display = "none";
-    document.getElementById("partnerFormContainer").style.display = "block";
-  }
-
-  document.getElementById("partnerFormIframe").addEventListener("load", function() {
-    // When iframe loads, check if it's showing formResponse URL
-    try {
-      if (this.contentWindow.location.href.includes("formResponse")) {
-        document.getElementById("partnerFormContainer").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "block";
-      }
-    } catch (e) {
-      // cross-domain restrictions may block access; fallback: always show thank you after a while?
-    }
-  });
-</script>
-  <!-- VICTUS GLOBAL -->
-  <section class="victus">
-    <details>
-      <summary>Our Partner: Victus Global</summary>
-      <h3>Victus General Services</h3>
-      <p>OTC • Market Making • Strategic Advisory • Listings</p>
-      <p>Telegram: <a href="https://t.me/VICTOR_Raphael_01">@VICTOR_Raphael_01</a></p>
-      <p>X: <a href="https://x.com/victorweb_3">VictorWeb_3</a></p>
-    </details>
+  <!-- What I Do -->
+  <section>
+    <h2>What I Do</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Fundraising</h3>
+        <p>I connect founders with pre-seed & seed investors ready to write small-to-large checks.</p>
+      </div>
+      <div class="card">
+        <h3>Partnerships</h3>
+        <p>Bring projects, investors, or deals. Close together. Share the upside.</p>
+      </div>
+      <div class="card">
+        <h3>Strategy</h3>
+        <p>Advisory & positioning to get your project investment-ready and scalable.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- CONTACT -->
-  <footer class="contact">
-    <h2>Contact Me</h2>
-    <p>Telegram: <a href="https://t.me/VICTOR_RAPHAEL">@VICTOR_RAPHAEL</a></p>
-    <p>X: <a href="https://x.com/victorraphael0_">@victorraphael0_</a></p>
-    <p>LinkedIn: <a href="http://linkedin.com/in/victor-raphael">Victor Raphael</a></p>
-    <p>Book a call: <a href="https://calendly.com/victorcryprt/new-meeting">Calendly</a></p>
-    
-    <p>All rights reserved © 2024</p>
-  </footer>
-</body>
-</html>
+  <!-- Partnerships -->
+  <section id="partner" class="partner">
+    <h2>Partnerships</h2>
+    <p>Let’s collaborate. Whether you’re a founder, investor, or connector — this is where we grow together.</p>
+    <button onclick="toggleForm()">📩 Apply for Partnership</button>
+
+    <div id="partnerFormContainer">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true"
