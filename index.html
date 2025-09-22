@@ -30,27 +30,43 @@
     </ul>
   </section>
 
-  <!-- PARTNERSHIPS -->
-  <section id="partner" class="partner">
-    <h2>Partnerships</h2>
-    <p>Bring projects, earn commissions. Work with me to close deals and get paid for successful connections.</p>
-    <form id="partnerForm" action="#" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" required>
-      <label for="message">How can we partner?</label>
-      <textarea id="message" required></textarea>
-      <button type="submit">Submit Partnership</button>
-    </form>
-    <script>
-      document.getElementById('partnerForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Handle form data here (e.g., send via AJAX or display a message)
-        alert('Thank you for your partnership submission!');
-      });
-    </script>
-  </section>
+ <!-- PARTNERSHIPS -->
+<section id="partner" class="partner">
+  <h2>Partnerships</h2>
+  <p>Bring projects, earn commissions. Work with me to close deals and get paid for successful connections.</p>
+
+  <iframe id="partnerForm"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true"
+    width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
+    Loading…
+  </iframe>
+
+  <div id="thankYouMessage" style="display:none; text-align:center; margin-top:20px;">
+    <h3>✅ Thank you!</h3>
+    <p>We’ll get back to you ASAP.</p>
+    <button onclick="refreshForm()">Submit another response</button>
+  </div>
+</section>
+
+<script>
+  // Refresh function
+  function refreshForm() {
+    document.getElementById("partnerForm").src =
+      "https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true";
+    document.getElementById("thankYouMessage").style.display = "none";
+    document.getElementById("partnerForm").style.display = "block";
+  }
+
+  // Detect form submission by URL change
+  const iframe = document.getElementById("partnerForm");
+  iframe.addEventListener("load", () => {
+    const url = iframe.contentWindow.location.href;
+    if (url.includes("formResponse")) {
+      iframe.style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    }
+  });
+</script>
 
   <!-- VICTUS GLOBAL -->
   <section class="victus">
