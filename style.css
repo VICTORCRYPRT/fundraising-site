@@ -1,211 +1,47 @@
-/* GLOBAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; background: #0e0e0e; color: #f1f1f1; }
 
-body {
-  background: #0e0e0e;
-  color: #f5f5f5;
-  line-height: 1.6;
-  font-size: 16px;
-}
+/* Navigation */
+header { background: #111; padding: 1rem; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; }
+ul { display: flex; list-style: none; }
+ul li { margin-left: 20px; }
+ul li a { color: #fff; text-decoration: none; transition: 0.3s; }
+ul li a:hover { color: #0ff; }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #0e0e0e, #1c1c1c);
-}
+/* Hero */
+.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #111, #222); }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.btn { padding: 10px 20px; background: #0ff; color: #111; border-radius: 5px; text-decoration: none; font-weight: bold; }
 
-.hero h1 {
-  font-size: 2.5rem;
-  color: #ffd700;
-  margin-bottom: 15px;
-}
+/* Sections */
+section { padding: 60px 20px; text-align: center; }
+.about p { max-width: 600px; margin: auto; }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #ddd;
-  max-width: 700px;
-  margin: 0 auto 25px;
-}
+/* Services */
+.cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.card { background: #1c1c1c; padding: 20px; border-radius: 8px; width: 300px; transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
 
-.cta {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+/* Contact */
+form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+input, textarea { padding: 10px; border: none; border-radius: 5px; }
+button { padding: 10px; background: #0ff; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+button:hover { background: #0cc; }
 
-.btn {
-  background: #ffd700;
-  color: #0e0e0e;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
+/* Footer */
+footer { text-align: center; padding: 20px; background: #111; margin-top: 40px; }
 
-.btn:hover {
-  background: #f0c000;
-}
+/* Animations */
+.fade-in { animation: fadeIn 1s ease-in forwards; }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
-.btn-alt {
-  background: transparent;
-  border: 2px solid #ffd700;
-  color: #ffd700;
-}
+.slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 1s ease-in forwards; }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
 
-.btn-alt:hover {
-  background: #ffd700;
-  color: #0e0e0e;
-}
-
-/* OFFER */
-.offer {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.offer h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #ffd700;
-  text-align: center;
-}
-
-.offer p {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.offer ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.offer li {
-  margin-bottom: 12px;
-  padding-left: 25px;
-  position: relative;
-}
-
-.offer li::before {
-  content: "✔";
-  color: #ffd700;
-  position: absolute;
-  left: 0;
-}
-
-/* PARTNERSHIP FORM */
-.partner {
-  background: #1c1c1c;
-  padding: 60px 20px;
-}
-
-.partner h2 {
-  text-align: center;
-  color: #ffd700;
-  margin-bottom: 20px;
-}
-
-.partner form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.partner input,
-.partner textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-.partner button {
-  background: #ffd700;
-  color: #0e0e0e;
-  padding: 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.partner button:hover {
-  background: #f0c000;
-}
-
-/* VICTUS GLOBAL */
-.victus {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.victus summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: #ffd700;
-}
-
-.victus h3 {
-  margin-top: 15px;
-  color: #fff;
-}
-
-.victus p a {
-  color: #ffd700;
-  text-decoration: none;
-}
-
-.victus p a:hover {
-  text-decoration: underline;
-}
-
-/* CONTACT */
-.contact {
-  background: #0a0a0a;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.contact h2 {
-  color: #ffd700;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  margin: 8px 0;
-}
-
-.contact a {
-  color: #ffd700;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .cta {
-    flex-direction: column;
-  }
-
-  .offer h2 {
-    font-size: 1.6rem;
-  }
-}
+/* Page transitions */
+body.fade-page { opacity: 0; transition: opacity 0.6s ease-in-out; }
+body.fade-page.show { opacity: 1; }
