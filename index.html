@@ -30,23 +30,28 @@
     </ul>
   </section>
 
- <!-- PARTNERSHIPS -->
+
+  <!-- PARTNERSHIPS -->
 <section id="partner" class="partner">
   <h2>Partnerships</h2>
-  <p>Bring projects, earn commissions. Work with me to close deals and get paid for successful connections.</p>
+  <p>Let’s collaborate and build together. Whether it’s projects, investors, or new opportunities — we grow, win, and share the upside side by side.</p>
 
-  <iframe id="partnerForm"
-    src="https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true"
-    width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
-    Loading…
-  </iframe>
+  <!-- Toggle Button -->
+  <button onclick="toggleForm()" class="form-toggle">📩 Apply for Partnership</button>
 
-  <div id="thankYouMessage" style="display:none; text-align:center; margin-top:20px;">
-    <h3>✅ Thank you!</h3>
-    <p>We’ll get back to you ASAP.</p>
-    <button onclick="refreshForm()">Submit another response</button>
+  <!-- Hidden Form -->
+  <div id="partnerFormContainer" style="display:none; margin-top:20px;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsIFRU8acD2dkADaBouUedA6Kf0F8iwfVDdihGS7ms1gTgKg/viewform?embedded=true" 
+      width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 </section>
+
+<script>
+  function toggleForm() {
+    const form = document.getElementById("partnerFormContainer");
+    form.style.display = (form.style.display === "none") ? "block" : "none";
+  }
+</script>
 
 <script>
   // Refresh function
