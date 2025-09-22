@@ -1,0 +1,211 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #0e0e0e;
+  color: #f5f5f5;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0e0e0e, #1c1c1c);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: #ffd700;
+  color: #0e0e0e;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f0c000;
+}
+
+.btn-alt {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+.btn-alt:hover {
+  background: #ffd700;
+  color: #0e0e0e;
+}
+
+/* OFFER */
+.offer {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.offer h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+  text-align: center;
+}
+
+.offer p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.offer ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.offer li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.offer li::before {
+  content: "✔";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+}
+
+/* PARTNERSHIP FORM */
+.partner {
+  background: #1c1c1c;
+  padding: 60px 20px;
+}
+
+.partner h2 {
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.partner form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.partner input,
+.partner textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.partner button {
+  background: #ffd700;
+  color: #0e0e0e;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.partner button:hover {
+  background: #f0c000;
+}
+
+/* VICTUS GLOBAL */
+.victus {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.victus summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.victus h3 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.victus p a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.victus p a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+.contact {
+  background: #0a0a0a;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin: 8px 0;
+}
+
+.contact a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  .offer h2 {
+    font-size: 1.6rem;
+  }
+}
