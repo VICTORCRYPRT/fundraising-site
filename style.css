@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -81,3 +82,52 @@ footer {
   color: #e6b7a9;
   text-decoration: none;
 }
+=======
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; background: #0e0e0e; color: #f1f1f1; }
+
+/* Navigation */
+header { background: #111; padding: 1rem; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; }
+ul { display: flex; list-style: none; }
+ul li { margin-left: 20px; }
+ul li a { color: #fff; text-decoration: none; transition: 0.3s; }
+ul li a:hover { color: #0ff; }
+
+/* Hero */
+.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #111, #222); }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.btn { padding: 10px 20px; background: #0ff; color: #111; border-radius: 5px; text-decoration: none; font-weight: bold; }
+
+/* Sections */
+section { padding: 60px 20px; text-align: center; }
+.about p { max-width: 600px; margin: auto; }
+
+/* Services */
+.cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.card { background: #1c1c1c; padding: 20px; border-radius: 8px; width: 300px; transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+
+/* Contact */
+form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+input, textarea { padding: 10px; border: none; border-radius: 5px; }
+button { padding: 10px; background: #0ff; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+button:hover { background: #0cc; }
+
+/* Footer */
+footer { text-align: center; padding: 20px; background: #111; margin-top: 40px; }
+
+/* Animations */
+.fade-in { animation: fadeIn 1s ease-in forwards; }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+.slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 1s ease-in forwards; }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Page transitions */
+body.fade-page { opacity: 0; transition: opacity 0.6s ease-in-out; }
+body.fade-page.show { opacity: 1; }
+>>>>>>> 44fc0ceb75201738ada016069e44aa967bca1b6e
