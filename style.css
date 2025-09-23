@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -9,125 +8,163 @@ body {
 
 header {
   background: #111;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(183,110,121,0.2);
 }
 
 .logo {
-  color: #e6b7a9; /* rose gold */
+  color: #c68a94;
+  font-weight: 900;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 nav ul li a {
   color: #f9f9f9;
   text-decoration: none;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #e6b7a9;
+  color: #f7cac9;
+  text-shadow: 0 0 5px rgba(247,202,201,0.5);
 }
 
 .hero {
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  border-bottom: 1px solid #c68a94;
 }
 
 .btn {
-  background: #e6b7a9;
+  background: linear-gradient(45deg, #c68a94, #f7cac9);
   color: #111;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-top: 2rem;
   display: inline-block;
+  box-shadow: 0 6px 15px rgba(183,110,121,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.services, .partner, .partnership {
-  padding: 3rem 2rem;
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(183,110,121,0.7);
+  background: linear-gradient(45deg, #d89ca5, #fce3e4);
+}
+
+.services {
+  padding: 4rem 2rem;
   text-align: center;
+  background: #0d0d0d;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .card {
   background: #1a1a1a;
   margin: 1rem;
-  padding: 2rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px;
+  max-width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border: 1px solid #e6b7a9;
+  transform: translateY(-7px);
+  border: 1px solid #c68a94;
+  box-shadow: 0 8px 20px rgba(183,110,121,0.4);
+}
+
+.card h3 {
+  color: #c68a94;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #f9f9f9;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact, .partnership {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact a {
+  color: #ffd1dc;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 600;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.contact a:hover {
+  color: #c68a94;
+  text-shadow: 0 0 5px rgba(183,110,121,0.5);
+}
+
+.contact details {
+  margin: 1rem 0;
+}
+
+.contact summary {
+  cursor: pointer;
+  color: #c68a94;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #c68a94;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.contact summary:hover {
+  background: rgba(183,110,121,0.2);
 }
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem;
   background: #111;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #c68a94;
 }
 
 .socials a {
-  margin: 0 1rem;
-  color: #e6b7a9;
+  margin: 0 1.2rem;
+  color: #ffd1dc;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, text-shadow 0.3s;
 }
-=======
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; background: #0e0e0e; color: #f1f1f1; }
 
-/* Navigation */
-header { background: #111; padding: 1rem; }
-nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; font-weight: bold; }
-ul { display: flex; list-style: none; }
-ul li { margin-left: 20px; }
-ul li a { color: #fff; text-decoration: none; transition: 0.3s; }
-ul li a:hover { color: #0ff; }
-
-/* Hero */
-.hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #111, #222); }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
-.btn { padding: 10px 20px; background: #0ff; color: #111; border-radius: 5px; text-decoration: none; font-weight: bold; }
-
-/* Sections */
-section { padding: 60px 20px; text-align: center; }
-.about p { max-width: 600px; margin: auto; }
-
-/* Services */
-.cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.card { background: #1c1c1c; padding: 20px; border-radius: 8px; width: 300px; transition: transform 0.3s; }
-.card:hover { transform: translateY(-5px); }
-
-/* Contact */
-form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
-input, textarea { padding: 10px; border: none; border-radius: 5px; }
-button { padding: 10px; background: #0ff; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
-button:hover { background: #0cc; }
-
-/* Footer */
-footer { text-align: center; padding: 20px; background: #111; margin-top: 40px; }
-
-/* Animations */
-.fade-in { animation: fadeIn 1s ease-in forwards; }
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
-.slide-up { opacity: 0; transform: translateY(20px); animation: slideUp 1s ease-in forwards; }
-@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-
-/* Page transitions */
-body.fade-page { opacity: 0; transition: opacity 0.6s ease-in-out; }
-body.fade-page.show { opacity: 1; }
->>>>>>> 44fc0ceb75201738ada016069e44aa967bca1b6e
+.socials a:hover {
+  color: #c68a94;
+  text-shadow: 0 0 5px rgba(183,110,121,0.5);
+}
